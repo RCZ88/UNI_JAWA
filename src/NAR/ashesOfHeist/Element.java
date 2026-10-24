@@ -16,6 +16,9 @@ public enum Element {
         this.multiplier = multiplier;
     }
 
+    public static Element[]getAllElements(){
+        return new Element[]{FIRE, WATER, GRASS};
+    }
     public String getEffect() {
         return effect;
     }

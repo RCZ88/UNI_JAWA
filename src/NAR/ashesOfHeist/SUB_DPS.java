@@ -3,8 +3,8 @@ package NAR.ashesOfHeist;
 public class SUB_DPS extends Character{
     private int statusRoundLength;
 
-    public SUB_DPS(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int statusRoundLength) {
-        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 28, 10);
+    public SUB_DPS(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int statusRoundLength, String[]attackNames) {
+        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 28, 10, attackNames);
         this.statusRoundLength = statusRoundLength;
     }
 

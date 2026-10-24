@@ -25,10 +25,12 @@ public abstract class Enemy extends Unit{
 
 //    public abstract double[] getMultiplier();
 
-    public Enemy(Element element, int maxHp, int baseAtk, int baseDef, int speed, int maxEnergy, int atkTypeCount) {
-        super(element, maxHp, baseAtk, baseDef, speed, maxEnergy, atkTypeCount);
+    public Enemy(Element element, int maxHp, int baseAtk, int baseDef, int speed, int maxEnergy, int atkTypeCount, String[]attackNames) {
+        super(element, maxHp, baseAtk, baseDef, speed, maxEnergy, atkTypeCount, attackNames);
 
     }
+
+
 //    @Override
 //    public void attack(Unit unit){
 //        int B = Stat.sumStat(super.getAtk());

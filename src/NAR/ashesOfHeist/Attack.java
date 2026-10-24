@@ -5,15 +5,17 @@ public class Attack {
     private static final int E_COST = 1;
     private static final int E_REG = 2;
 
+    private String attackName;
     private AttackType atkType;
     private double[] multipliers;
     private final MultiplierConstruct multiplierConstruct;
     private final int[]energy = new int[3];
     private final AOE aoe;
     private final boolean burn;
-    private Unit ofUnit;
+    private final Unit ofUnit;
 
     public Attack(AttackType at, int energyCost, int energyRegeneration, int multiplierCount, double []multipliers, MultiplierConstruct multiplierConstructAlgo, AOE aoe, boolean burn, Unit ofUnit){
+        this.attackName = ofUnit.getAttackNames()[at.getIndex()];
         this.atkType = at;
         this.aoe = aoe;
         this.burn = burn;
@@ -75,5 +77,21 @@ public class Attack {
 
     public int[] getEnergy() {
         return energy;
+    }
+
+    public AOE getAoe() {
+        return aoe;
+    }
+
+    public boolean isBurn() {
+        return burn;
+    }
+
+    public String getAttackName() {
+        return attackName;
+    }
+
+    public void setAttackName(String attackName) {
+        this.attackName = attackName;
     }
 }

@@ -2,8 +2,8 @@ package NAR.ashesOfHeist;
 
 public class SUPPORT extends Character {
 
-    public SUPPORT(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int skillCost) {
-        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 24, 4);
+    public SUPPORT(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, String[]attackNames) {
+        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 24, 4, attackNames);
     }
 
 

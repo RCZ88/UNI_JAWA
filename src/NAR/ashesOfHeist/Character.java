@@ -16,8 +16,8 @@ public abstract class Character extends Unit{
     private int curXp;
 
 
-    public Character(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int skillCost, int energyRegen) {
-        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 3);
+    public Character(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int skillCost, int energyRegen, String[] attackNames) {
+        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 3, attackNames);
         this.artifacts = new ArrayList<>();
         this.skillCost = skillCost;
         this.baseEnergyRegen = energyRegen;

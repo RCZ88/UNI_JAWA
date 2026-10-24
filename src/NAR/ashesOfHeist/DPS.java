@@ -2,8 +2,8 @@ package NAR.ashesOfHeist;
 
 public class DPS extends Character {
 
-    public DPS(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy) {
-        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 10, 6);
+    public DPS(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, String[]attackNames) {
+        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 10, 6, attackNames);
     }
 
 //    @Override

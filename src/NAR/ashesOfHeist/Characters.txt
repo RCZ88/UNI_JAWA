@@ -1,0 +1,9 @@
+1,ONgoku,DPS,FIRE,200,150,100,140,20,6,0,FireBlazing Palm Strike,World Ending Kamehameha
+2,AOmine,DPS,WATER,200,100,150,135,20,6,0,Streetball Tide Shot,Abyssal Tsunami
+3,ErenJaeger,DPS,GRASS,130,100,120,130,20,6,0,Titan Fist,Rumbling Overgrowth
+4,KakugO,SUB_DPS,FIRE,160,130,90,125,25,10,28,Iron Knuckle,Wildfire Instinct
+5,NejiHyuga,SUB_DPS,WATER,160,90,130,120,25,10,28,Gentle Fist Current,Eight Trigrams Whirlpool
+6,WAjima,SUB_DPS,GRASS,110,90,110,115,25,10,28,Thorn Fang,Venom Bloom
+7,KYoku,SUPPORT,FIRE,220,110,120,110,22,4,24,Ember Lance,Phoenix Blessing
+8,JotaRo,SUPPORT,WATER,220,80,115,105,22,4,24,Star Platinum Splash,Tidal Restore
+9,ChikafuJiwara,SUPPORT,GRASS,200,80,110,100,22,4,24,Vine Lash,Verdant Renewal

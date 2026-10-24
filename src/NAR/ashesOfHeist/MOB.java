@@ -1,12 +1,34 @@
 package NAR.ashesOfHeist;
 
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.function.Consumer;
+
 public class MOB extends Enemy{
-    public MOB(Element element, int maxHp, int baseAtk, int baseDef, int maxEnergy) {
-        super(element, maxHp, baseAtk, baseDef, 0, maxEnergy, 3);
-        setSpeed(formatStat(getMobSpeed()));
+    private static final int MOB_PER_DUNGEON = 4;
+    private final Consumer<DungeonTier>[]statScalers = new Consumer[]{
+            (Consumer<DungeonTier>)super::scaleAtk, (Consumer<DungeonTier>)super::scaleDef,
+            (Consumer<DungeonTier>)super::scaleHp, (Consumer<DungeonTier>)super::scaleEnergy,
+            (Consumer<DungeonTier>)super::scaleSpeed
+    };
+
+    public MOB(Element element) {
+        super(element, 600, 25, 75, 60, 200, 3, new String[]{"Pre-Training", "NAR-26", "NAR-27"});
+
     }
-    public int getMobSpeed(){
-        return 60 + (60 * getLevel() / 20);
+
+    public static ArrayList<MOB> generateMobs(Team team, DungeonTier dungeonTier){
+        Random r = new Random();
+        ArrayList<MOB>mobs = new ArrayList<>();
+        for(int i = 0; i<MOB_PER_DUNGEON; i++){
+            MOB mob = new MOB(Element.getAllElements()[r.nextInt(1,3)]);
+            mob.setLevel(team.getTeamLevel());
+            for (Consumer<DungeonTier> statScaler : mob.statScalers) {
+                statScaler.accept(dungeonTier);
+            }
+            mobs.add(mob);
+        }
+        return mobs;
     }
 
 //    @Override

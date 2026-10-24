@@ -14,7 +14,7 @@ public enum DungeonTier {
         this.numberOfArtifact = numberOfArtifact;
     }
 
-    private int getLevel( int teamLevel){
+    public int getLevel( int teamLevel){
         switch(this){
             case EASY -> {
                 return Math.min(15, 1+teamLevel/2);

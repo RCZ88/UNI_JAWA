@@ -6,6 +6,7 @@ public class Player {
     private ArrayList<Artifact>artifacts;
     private Team team;
 
+
     public boolean isArtifactUpgradable(int artifactIndex, int statIndex){
         Stat statByIndex = artifacts.get(artifactIndex).getStatByIndex(statIndex);
         if(statByIndex.getLevel() == Stat.MAX_LEVEL){

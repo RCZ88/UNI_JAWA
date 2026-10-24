@@ -1,0 +1,134 @@
+[FireBlazing Palm Strike]
+ONgoku Attack. Hits 1 enemy for (100% + 6% x level) of ATK. Cost 0. Gains 6 + level energy.
+
+[World Ending Kamehameha]
+ONgoku Skill. Spends the whole energy bar (min 10). Hits all enemies for (500% + 600% x level) x (energySpent / (level x 10)) of ATK.
+
+[Streetball Tide Shot]
+AOmine Attack. Hits 1 enemy for (100% + 6% x level) of DEF. Cost 0. Gains 6 + level energy.
+
+[Abyssal Tsunami]
+AOmine Skill. Spends the whole energy bar (min 10). Hits all enemies for (500% + 600% x level) x (energySpent / (level x 10)) of DEF.
+
+[Titan Fist]
+ErenJaeger Attack. Hits 1 enemy for (100% + 6% x level) of max HP. Cost 0. Gains 6 + level energy.
+
+[Rumbling Overgrowth]
+ErenJaeger Skill. Spends the whole energy bar (min 10). Hits all enemies for (500% + 600% x level) x (energySpent / (level x 10)) of max HP.
+
+[Iron Knuckle]
+KakugO Attack. Hits 1 enemy for (100% + 4% x level) of ATK. Cost 0. Gains 10 + level energy.
+
+[Wildfire Instinct]
+KakugO Skill. Cost 28. Hits all enemies for (500% + 130% x level) of ATK and applies Burn.
+
+[Gentle Fist Current]
+NejiHyuga Attack. Hits 1 enemy for (100% + 4% x level) of DEF. Cost 0. Gains 10 + level energy.
+
+[Eight Trigrams Whirlpool]
+NejiHyuga Skill. Cost 28. Hits all enemies for (500% + 130% x level) of DEF and applies Drowning.
+
+[Thorn Fang]
+WAjima Attack. Hits 1 enemy for (100% + 4% x level) of max HP. Cost 0. Gains 10 + level energy.
+
+[Venom Bloom]
+WAjima Skill. Cost 28. Hits all enemies for (500% + 130% x level) of max HP and applies Poison.
+
+[Ember Lance]
+KYoku Attack. Hits 1 enemy for (60% + 2% x level) of ATK. Cost 0. Gains 4 + level energy, allies gain half.
+
+[Phoenix Blessing]
+KYoku Skill. Cost 24. Heals the whole party for (60% + 2% x level) of ATK.
+
+[Star Platinum Splash]
+JotaRo Attack. Hits 1 enemy for (60% + 2% x level) of DEF. Cost 0. Gains 4 + level energy, allies gain half.
+
+[Tidal Restore]
+JotaRo Skill. Cost 24. Heals the whole party for (60% + 2% x level) of DEF.
+
+[Vine Lash]
+ChikafuJiwara Attack. Hits 1 enemy for (60% + 2% x level) of max HP. Cost 0. Gains 4 + level energy, allies gain half.
+
+[Verdant Renewal]
+ChikafuJiwara Skill. Cost 24. Heals the whole party for (20% + 1.4% x level) of max HP.
+
+[PreTraining]
+Mob Attack. 100% of ATK to 1 enemy. Cost 0. Gains 80 + level energy.
+
+[NAR 26-1]
+Mob Basic. Cost 100. 100% of ATK to all enemies.
+
+[NAR 27-1]
+Mob Intermediate. Cost 200. 200% of ATK to all enemies. Gains 100 energy.
+
+[Solar Cleave]
+EscaNor Attack. Cost 0. 100% of ATK to all. Gains 50 energy.
+
+[Noon Radiance]
+EscaNor Basic. Cost 60. 100% of ATK to all plus Burn.
+
+[Pride's Ascension]
+EscaNor Intermediate. Cost 120. 200% of ATK to all.
+
+[The One True Sun]
+EscaNor Ultimate. Cost 200. 400% of ATK to all plus Burn.
+
+[Ember Slash]
+MaTsu Attack. Cost 0. 100% of ATK to all. Gains 50 energy.
+
+[Cinder Wave]
+MaTsu Basic. Cost 20. 100% of ATK to all plus Burn.
+
+[Molten Verdict]
+MaTsu Intermediate. Cost 100. 200% of ATK to all.
+
+[Hearth Of Ruin]
+MaTsu Ultimate. Cost 200. 400% of ATK to all plus Burn.
+
+[Twin Tide Strike]
+ArcHer Attack. Cost 0. 150% of ATK to 2 random enemies. Gains 80 energy.
+
+[Deep Current]
+ArcHer Basic. Cost 80. 125% of ATK to all.
+
+[Crushing Surge]
+ArcHer Intermediate. Cost 300. 250% of ATK to all.
+
+[Abyss Calling]
+ArcHer Ultimate. Cost 500. 400% of ATK to all plus Drowning.
+
+[Reef Lash]
+ShaLlwrath Attack. Cost 0. 150% of ATK to 2 random enemies. Gains 80 energy.
+
+[Undertow]
+ShaLlwrath Basic. Cost 75. 150% of ATK to all.
+
+[Maelstrom Grip]
+ShaLlwrath Intermediate. Cost 300. 300% of ATK to all.
+
+[Sunken Requiem]
+ShaLlwrath Ultimate. Cost 500. 420% of ATK to all plus Drowning.
+
+[Spore Strike]
+AlFone Attack. Cost 0. 100% of ATK to 1 enemy, Poison on all. Gains 200 energy.
+
+[Briar Storm]
+AlFone Basic. Cost 120. 150% of ATK to all.
+
+[Ancient Overgrowth]
+AlFone Intermediate. Cost 400. 300% of ATK to all.
+
+[World Tree Wrath]
+AlFone Ultimate. Cost 700. 420% of ATK to all plus Poison.
+
+[Rot Touch]
+WeiYing Attack. Cost 0. 100% of ATK to 1 enemy, Poison on all. Gains 200 energy.
+
+[Creeping Thorns]
+WeiYing Basic. Cost 150. 125% of ATK to all.
+
+[Choking Bloom]
+WeiYing Intermediate. Cost 350. 250% of ATK to all.
+
+[Canopy Collapse]
+WeiYing Ultimate. Cost 810. 400% of ATK to all plus Poison.

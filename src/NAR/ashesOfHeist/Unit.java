@@ -39,7 +39,8 @@ public abstract class Unit {
     private double[] critRate = new double[2];
     private double[] critDamage = new double[2];
     private HashMap<Integer, Integer> elementDamageBonus = new HashMap<>();
-    private Attack[]attacks;
+    private final Attack[]attacks;
+    private final String[] attackNames;
 
     private int currentHp;
     private ArrayList<Status> statuses = new ArrayList<>();
@@ -48,7 +49,7 @@ public abstract class Unit {
 //    public Unit() {
 //        this.statuses = new ArrayList<>();
 //    }
-    public Unit(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int attackTypeCount){
+    public Unit(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int attackTypeCount, String []attackNames){
         this.element = element;
         this.maxHp[BASE_STAT] = maxHp;
         this.atk[BASE_STAT] = baseAtk;
@@ -57,6 +58,7 @@ public abstract class Unit {
         this.maxEnergy[BASE_STAT] = maxEnergy;
         this.currentEnergy = 0;
         this.attacks = new Attack[attackTypeCount];
+        this.attackNames = attackNames;
     }
 
     public abstract void loadAttacks();
@@ -156,6 +158,21 @@ public abstract class Unit {
     }
     private void addAtk(int atk){
         this.atk[ARTIFACT_STAT] += atk;
+    }
+    protected void scaleHp(DungeonTier dungeonTier){
+        this.maxHp[0] = (int) (this.maxHp[0] + this.maxHp[0] * level/StatType.HP.getMobDivisor()) * dungeonTier.getStatMulti();
+    }
+    protected void scaleAtk(DungeonTier dungeonTier){
+        this.atk[0] = (int) (this.atk[0] + this.atk[0] * level/StatType.ATTACK.getMobDivisor()) * dungeonTier.getStatMulti();
+    }
+    protected void scaleDef(DungeonTier dungeonTier){
+        this.def[0] = (int) (this.def[0] + this.def[0] * level/StatType.DEFENSE.getMobDivisor()) * dungeonTier.getStatMulti();
+    }
+    protected void scaleSpeed(DungeonTier dungeonTier){
+        this.def[0] = (int) (this.def[0] + this.def[0] * level/StatType.DEFENSE.getMobDivisor()) * dungeonTier.getStatMulti();
+    }
+    protected void scaleEnergy(DungeonTier dungeonTier){
+        this.maxEnergy[0] = (int) (this.maxEnergy[0] + this.maxEnergy[0] * level/StatType.ENERGY_CAPACITY.getMobDivisor()) * dungeonTier.getStatMulti();
     }
 
     private void addCritRate(int cr){
@@ -319,6 +336,9 @@ public abstract class Unit {
         this.maxHp = maxHp;
     }
 
+    public String[] getAttackNames() {
+        return attackNames;
+    }
 }
 
 

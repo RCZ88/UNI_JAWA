@@ -7,8 +7,8 @@ public class BOSS  extends Enemy{
     private AOE[]aoePA;
     private boolean[]effectPA;
 
-    public BOSS(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy) {
-        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 4);
+    public BOSS(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, String []attackNames) {
+        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 4, attackNames);
     }
 
     @Override
