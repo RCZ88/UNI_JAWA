@@ -4,11 +4,17 @@ import java.nio.file.Path;
 
 public enum DataPaths {
 
-    CHARACTERS("Characters.txt"),
-    CHARACTER_LEVEL("CharacterLevel.txt"),
-    ARTIFACTS("Artifacts.txt"),
+    ALLIES("Allies.txt"),
+    ALLIES_LEVEL("AlliesLevel.txt"),
+    ARTIFACT_NAMES("ArtifactNames.txt"),
+    ARTIFACTS_OWNED("Artifacts.txt"),
     ARTIFACT_SAMPLE("Artifacts_sample.txt"),
-    BOSS_DEFEATED("BossDefeated.txt");
+    BOSS_DEFEATED("BossDefeated.txt"),
+    BOSSES("Bosses.txt"),
+    SPRITES("Sprite.txt"),
+    MOBS("Mobs.txt"),
+    NAR_LOGO("narlogo_ascii.txt"),
+    TITLE("Title.txt");
 
     private final String path;
     DataPaths(String path){

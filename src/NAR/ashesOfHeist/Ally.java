@@ -2,26 +2,29 @@ package NAR.ashesOfHeist;
 
 import java.util.ArrayList;
 
-public abstract class Character extends Unit{
+public abstract class Ally extends Unit{
     private static final int ATK_COST = 0;
     protected static final int K_INDEX = 1;
     protected static final int P_INDEX = 0;
     protected static final int MULTIPLIER_AMOUNT = 2;
     protected static final MultiplierConstruct MULTIPLIER_CONSTRUCT = (multipliers, unit) -> multipliers[P_INDEX] + unit.getLevel() * multipliers[K_INDEX];
-
+    public static final int MAX_LEVEL = 50;
     private int skillCost;
     private int baseEnergyRegen;
     private Team ofTeam;
     private ArrayList<Artifact> artifacts;
     private int curXp;
+    private int index;
 
 
-    public Character(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int skillCost, int energyRegen, String[] attackNames) {
-        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 3, attackNames);
+    public Ally(String name, Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int skillCost, int energyRegen, String[] attackNames) {
+        super(name, element,  maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 3, attackNames);
         this.artifacts = new ArrayList<>();
         this.skillCost = skillCost;
         this.baseEnergyRegen = energyRegen;
+        this.curXp = 0;
     }
+
 
     public int getXpToNextLevel(){
         return (int) (8 * Math.pow(1.1, (getLevel()-1))) - curXp;
@@ -47,6 +50,10 @@ public abstract class Character extends Unit{
         int B = super.getAtk()[BASE_STAT];
         int L = super.getLevel();
         super.updateBaseAtk((B + B * (L / 25)) * (1 + 3 * (L / 50)));
+    }
+
+    public void addArtifact(Artifact a){
+        this.artifacts.add(a);
     }
 
 
@@ -77,6 +84,21 @@ public abstract class Character extends Unit{
         addEnergy(baseEnergyRegen + getLevel());
     }
 
+    public int getCurXp() {
+        return curXp;
+    }
+
+    public void setCurXp(int curXp) {
+        this.curXp = curXp;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
 
     public int getSkillCost() {
         return skillCost;

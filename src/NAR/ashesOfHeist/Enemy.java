@@ -25,8 +25,8 @@ public abstract class Enemy extends Unit{
 
 //    public abstract double[] getMultiplier();
 
-    public Enemy(Element element, int maxHp, int baseAtk, int baseDef, int speed, int maxEnergy, int atkTypeCount, String[]attackNames) {
-        super(element, maxHp, baseAtk, baseDef, speed, maxEnergy, atkTypeCount, attackNames);
+    public Enemy(String name, Element element, int maxHp, int baseAtk, int baseDef, int speed, int maxEnergy, int atkTypeCount, String[]attackNames) {
+        super(name, element, maxHp, baseAtk, baseDef, speed, maxEnergy, atkTypeCount, attackNames);
 
     }
 

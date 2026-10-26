@@ -1,14 +1,25 @@
 package NAR.ashesOfHeist;
 
 public class BOSS  extends Enemy{
-    private int[]multiplierPA;
-    private int[]energyRegenPA;
-    private int[]costPA;
-    private AOE[]aoePA;
-    private boolean[]effectPA;
+    public static final boolean CHARACTER = false;
+    public static final boolean ARTIFACT = true;
+    public final int index;
+    private final int[]multiplierPA;
+    private final int[]energyRegenPA;
+    private final int[]costPA;
+    private final AOE[]aoePA;
+    private final boolean[]effectPA;
+    private boolean charOrArtifact;
 
-    public BOSS(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, String []attackNames) {
-        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 4, attackNames);
+    public BOSS(int index, String name,  Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, String []attackNames, boolean charOrArtifact) {
+        super(name, element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 4, attackNames);
+        this.index = index;
+        this.charOrArtifact = charOrArtifact;
+        multiplierPA = new int[4];
+        energyRegenPA = new int[4];
+        costPA = new int[4];
+        aoePA = new AOE[4];
+        effectPA = new boolean[4];
     }
 
     @Override
@@ -22,44 +33,36 @@ public class BOSS  extends Enemy{
         }
     }
 
-    public int[] getMultiplierPA() {
-        return multiplierPA;
+    public int getIndex() {
+        return index;
     }
 
-    public void setMultiplierPA(int[] multiplierPA) {
-        this.multiplierPA = multiplierPA;
+    public int[] getMultiplierPA() {
+        return multiplierPA;
     }
 
     public int[] getEnergyRegenPA() {
         return energyRegenPA;
     }
 
-    public void setEnergyRegenPA(int[] energyRegenPA) {
-        this.energyRegenPA = energyRegenPA;
-    }
-
     public int[] getCostPA() {
         return costPA;
-    }
-
-    public void setCostPA(int[] costPA) {
-        this.costPA = costPA;
     }
 
     public AOE[] getAoePA() {
         return aoePA;
     }
 
-    public void setAoePA(AOE[] aoePA) {
-        this.aoePA = aoePA;
-    }
-
     public boolean[] getEffectPA() {
         return effectPA;
     }
 
-    public void setEffectPA(boolean[] effectPA) {
-        this.effectPA = effectPA;
+    public boolean isCharOrArtifact() {
+        return charOrArtifact;
+    }
+
+    public void setCharOrArtifact(boolean charOrArtifact) {
+        this.charOrArtifact = charOrArtifact;
     }
 
     //

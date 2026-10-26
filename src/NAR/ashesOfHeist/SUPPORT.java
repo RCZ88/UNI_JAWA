@@ -1,9 +1,9 @@
 package NAR.ashesOfHeist;
 
-public class SUPPORT extends Character {
+public class SUPPORT extends Ally {
 
-    public SUPPORT(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, String[]attackNames) {
-        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 24, 4, attackNames);
+    public SUPPORT(String name, Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, String[]attackNames) {
+        super(name, element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 24, 4, attackNames);
     }
 
 
@@ -15,8 +15,8 @@ public class SUPPORT extends Character {
         }else{
             multiplier = 0.2 * 0.014 * getLevel();
         }
-        for (Character character : this.getOfTeam().getCharacters()) {
-            character.acceptHealing((int) (multiplier * getScalingStat()));
+        for (Ally ally : this.getOfTeam().getAllies()) {
+            ally.acceptHealing((int) (multiplier * getScalingStat()));
         }
     }
 

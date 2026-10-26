@@ -28,7 +28,7 @@ public enum DungeonTier {
         }
     }
 
-    private int getXpPerCharReceive(int enemyLevel){
+    public int getXpPerCharReceive(int enemyLevel){
         switch(this){
             case EASY -> {
                 return 3 + enemyLevel/3;

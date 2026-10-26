@@ -1,3 +1,4 @@
+id, name, role, element, hp, atk, def, spd, energy, regenBase, skillCost, attackName, skillName
 1,ONgoku,DPS,FIRE,200,150,100,140,20,6,0,FireBlazing Palm Strike,World Ending Kamehameha
 2,AOmine,DPS,WATER,200,100,150,135,20,6,0,Streetball Tide Shot,Abyssal Tsunami
 3,ErenJaeger,DPS,GRASS,130,100,120,130,20,6,0,Titan Fist,Rumbling Overgrowth

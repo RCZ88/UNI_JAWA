@@ -6,29 +6,34 @@ import java.util.function.Consumer;
 
 public class MOB extends Enemy{
     private static final int MOB_PER_DUNGEON = 4;
+    public static final int UNIQUE_MOB_AMOUNT = 8;
     private final Consumer<DungeonTier>[]statScalers = new Consumer[]{
             (Consumer<DungeonTier>)super::scaleAtk, (Consumer<DungeonTier>)super::scaleDef,
             (Consumer<DungeonTier>)super::scaleHp, (Consumer<DungeonTier>)super::scaleEnergy,
             (Consumer<DungeonTier>)super::scaleSpeed
     };
 
-    public MOB(Element element) {
-        super(element, 600, 25, 75, 60, 200, 3, new String[]{"Pre-Training", "NAR-26", "NAR-27"});
-
+    public MOB(String name) {
+        super(name, null, 600, 25, 75, 60, 200, 3, new String[]{"Pre-Training", "NAR-26", "NAR-27"});
+        generateElement(new Random());
     }
 
-    public static ArrayList<MOB> generateMobs(Team team, DungeonTier dungeonTier){
+    public static ArrayList<MOB> generateMobs(Player player, DungeonTier dungeonTier){
         Random r = new Random();
         ArrayList<MOB>mobs = new ArrayList<>();
         for(int i = 0; i<MOB_PER_DUNGEON; i++){
-            MOB mob = new MOB(Element.getAllElements()[r.nextInt(1,3)]);
-            mob.setLevel(team.getTeamLevel());
+            MOB mob = Game.ALL_MOBS.get(r.nextInt(0, UNIQUE_MOB_AMOUNT-1));
+            mob.setLevel(player.getTeam().getTeamLevel());
             for (Consumer<DungeonTier> statScaler : mob.statScalers) {
                 statScaler.accept(dungeonTier);
             }
             mobs.add(mob);
         }
         return mobs;
+    }
+
+    public void generateElement(Random r){
+        setElement(Element.getAllElements()[r.nextInt(1,3)]);
     }
 
 //    @Override

@@ -1,9 +1,9 @@
 package NAR.ashesOfHeist;
 
-public class DPS extends Character {
+public class DPS extends Ally {
 
-    public DPS(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, String[]attackNames) {
-        super(element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 10, 6, attackNames);
+    public DPS(String name, Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, String[]attackNames) {
+        super(name, element, maxHp, baseAtk, baseDef, baseSpd, maxEnergy, 10, 6, attackNames);
     }
 
 //    @Override

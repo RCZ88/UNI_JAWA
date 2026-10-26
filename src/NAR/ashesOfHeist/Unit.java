@@ -1,8 +1,5 @@
 package NAR.ashesOfHeist;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +26,9 @@ public abstract class Unit {
     );
 
 
+    private final String name;
+    private final String sprite;
+
     private Element element;
     private int level;
     private int[] maxHp = new int[2];
@@ -49,7 +49,8 @@ public abstract class Unit {
 //    public Unit() {
 //        this.statuses = new ArrayList<>();
 //    }
-    public Unit(Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int attackTypeCount, String []attackNames){
+    public Unit(String name, Element element, int maxHp, int baseAtk, int baseDef, int baseSpd, int maxEnergy, int attackTypeCount, String []attackNames){
+        this.name = name;
         this.element = element;
         this.maxHp[BASE_STAT] = maxHp;
         this.atk[BASE_STAT] = baseAtk;
@@ -59,6 +60,8 @@ public abstract class Unit {
         this.currentEnergy = 0;
         this.attacks = new Attack[attackTypeCount];
         this.attackNames = attackNames;
+        this.level = 1;
+        this.sprite = Game.ALL_UNIT_SPRITE.get(name);
     }
 
     public abstract void loadAttacks();
@@ -67,17 +70,7 @@ public abstract class Unit {
         this.attacks[attack.getAtkType().getIndex()] = attack;
     }
 
-    public static ArrayList<Unit> loadAllUnits(String filepath){
-        Path path = Path.of(filepath);
-        ArrayList<Unit>units = new ArrayList<>();
-        try{
-            List<String> lines = Files.readAllLines(path);
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return units;
-    }
 //    public int calculateFinalDamage(Unit target,  AttackType attackType){
 //        double amplifiedDamage = (getScalingStat() * getDamageMultiplier(attackType)) * getMultiplier(this, target) * (1+ (double) getElementBonus() /100);
 //        double mitigatedDamage = amplifiedDamage * 1000/ (1000+ Stat.sumStat(target.def));
@@ -338,6 +331,18 @@ public abstract class Unit {
 
     public String[] getAttackNames() {
         return attackNames;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSprite() {
+        return sprite;
+    }
+
+    public Attack[] getAttacks() {
+        return attacks;
     }
 }
 

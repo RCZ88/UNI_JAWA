@@ -2,17 +2,15 @@ package NAR.ashesOfHeist;
 
 public class Stat {
     public static final int CHANCE = 60;
-    public static final int MAX_LEVEL = 3;
 
     private StatType statType;
-    private int level;
-
+//    private int level;
     private int originalValue;
     private int value;
 
     public Stat(StatType statType){
         this.statType = statType;
-        this.level = 0;
+//        this.level = 0;
         rollValue();
     }
 
@@ -21,14 +19,10 @@ public class Stat {
         value = originalValue;
     }
 
-    public int getLevel() {
-        return level;
-    }
-    public void upgradeLevel(){
-        if(level == MAX_LEVEL) return;
-        level++;
-        value = originalValue * level;
-    }
+//    public int getLevel() {
+//        return level;
+//    }
+
 
     public static int sumStat(int[]stat){
         int sum = 0;
@@ -44,7 +38,6 @@ public class Stat {
         }
         return sum;
     }
-
 
     public int getOriginalValue() {
         return originalValue;
